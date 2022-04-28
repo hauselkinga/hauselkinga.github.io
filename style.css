@@ -1,0 +1,126 @@
+body {
+    background-color: rgb(192, 191, 191);
+}
+
+.pageContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    height: 600px;
+    background: whitesmoke;
+    display: flex;
+    box-shadow: 2px 10px 20px rgb(163, 161, 161);
+}
+
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    width: inherit;
+    margin: 30px;
+}
+
+.thumbnails img {
+    height: 100px;
+    width: 100px;
+    margin: 0 20px;
+    object-fit: cover;
+    border: 6px solid whitesmoke;
+    box-shadow: 0 10px 10px -6px;
+    cursor: pointer;
+}
+
+/*.thumbnails img:hover {
+    position: relative;
+    bottom: 10px;
+    box-shadow: 0 16px 12px -8px;
+}*/
+
+#imageHolder {
+    position: relative;
+    max-width: 1000px;
+    height: 600px;
+    overflow: hidden;
+}
+
+.imageText {
+    position: absolute;
+    bottom: 0;
+    max-height: 200px;
+    width: 1000px;
+    padding: 8px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.6);
+    color: aliceblue;
+    text-align: justify;
+}
+
+.button {
+    width: 30px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.button:active {
+    filter: invert(65%) sepia(3%) saturate(73%) hue-rotate(314deg) brightness(99%) contrast(94%);
+    box-shadow: inset 1px 1px 15px 4px;
+}
+
+.right {
+    transform: rotate(0.5turn);
+}
+
+#currentImage {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.activeThumbnail {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.activeThumbnail::before {
+    position: absolute;
+    z-index: -1;
+    top: -10px;
+    content: "";
+    height: 20px;
+    width: 20px;
+    border: 1px solid whitesmoke;
+    background-color: whitesmoke;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    transform: rotate(225deg);
+}
+
+.hiddenTitle {
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -60%;
+
+    min-width: 150px;
+    line-height: 34px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 6px;
+}
